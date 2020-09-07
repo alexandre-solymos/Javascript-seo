@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    fetch("https://canssens-seo-extraction-v1.p.rapidapi.com/seo/api/", {
+        "method": "POST",
+        "headers": {
+            "x-rapidapi-host": "canssens-seo-extraction-v1.p.rapidapi.com",
+            "x-rapidapi-key": "67a83a8514msh292c970723da027p18a2e2jsn7f89197bcd77",
+            "content-type": "application/x-www-form-urlencoded"
+        },
+        "body": {
+            "url": "www.mashape.com"
+        }
+    })
+        .then(response => {
+            console.log(response);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+</script>
+</body>
+</html>
